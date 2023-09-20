@@ -1,9 +1,7 @@
-function App() {
-  return (
-    <div>
-      sandbox-webapp
-    </div>
-  )
+import React from 'react';
+
+function App(): React.ReactElement {
+    return <div>sandbox-webapp</div>;
 }
 
-export default App
+export default App;
