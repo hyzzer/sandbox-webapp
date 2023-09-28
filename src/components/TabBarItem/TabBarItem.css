@@ -1,0 +1,9 @@
+.tabbar-item {
+    margin-bottom: 1.5rem;
+}
+
+.tabbar-link {
+    color: white;
+    text-decoration: none;
+    user-select: none;
+}
