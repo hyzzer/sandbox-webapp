@@ -1,10 +1,9 @@
-import LeftNavbar from './Navbar/Navbar';
 import './TrackingView.css';
 
 const TrackingView = (): React.ReactElement => {
     return (
         <div className="tracking-view-container">
-            <LeftNavbar />
+            <p>TRACKING</p>
         </div>
     );
 };

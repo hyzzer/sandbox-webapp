@@ -2,8 +2,13 @@
     margin-bottom: 1.5rem;
 }
 
-.tabbar-link {
-    color: white;
-    text-decoration: none;
+.tabbar-button {
+    background-color: transparent;
+    border: 0;
     user-select: none;
+    color: white;
+}
+
+.tabbar-button:hover {
+    color: red;
 }

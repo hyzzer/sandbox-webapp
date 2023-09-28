@@ -1,19 +1,19 @@
+import { useViewContext } from '../../hooks/useViewContext';
+import { Links } from '../../utils/Links';
 import './TabBarItem.css';
 
-type TabBarItemProps = {
-    label: string;
-    url: string;
-};
+type TabBarItemProps = Links;
 
-const TabBarItem: React.FC<TabBarItemProps> = ({
-    label,
-    url,
-}: TabBarItemProps) => {
+const TabBarItem: React.FC<TabBarItemProps> = ({ label, tab }: Links) => {
+    const { setView } = useViewContext();
+    const onChangeTab = (): void => {
+        setView(tab);
+    };
     return (
         <li className="tabbar-item">
-            <a href={url} className="tabbar-link">
+            <button onClick={onChangeTab} className="tabbar-button">
                 {label}
-            </a>
+            </button>
         </li>
     );
 };

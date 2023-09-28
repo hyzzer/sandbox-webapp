@@ -1,8 +1,9 @@
+import { Links } from '../../utils/Links';
 import TabBarItem from '../TabBarItem/TabBarItem';
 import './TabBar.css';
 
 interface TabbarProps {
-    links: { label: string; url: string }[];
+    links: Links[];
 }
 
 const Tabbar = ({ links }: TabbarProps): React.ReactElement => {
@@ -12,7 +13,7 @@ const Tabbar = ({ links }: TabbarProps): React.ReactElement => {
                 <TabBarItem
                     key={link.label}
                     label={link.label}
-                    url={link.url}
+                    tab={link.tab}
                 />
             ))}
         </ul>
