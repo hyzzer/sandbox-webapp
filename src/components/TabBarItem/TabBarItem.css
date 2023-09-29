@@ -1,5 +1,6 @@
 .tabbar-item {
     margin-bottom: 1.5rem;
+    user-select: none;
 }
 
 .tabbar-button {

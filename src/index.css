@@ -17,3 +17,9 @@ html, body {
 .content-container {
     flex: 1 1 auto;
 }
+
+.icon {
+    width: 2rem;
+    pointer-events: none;
+    user-select: none;
+}

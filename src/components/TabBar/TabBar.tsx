@@ -10,11 +10,7 @@ const Tabbar = ({ links }: TabbarProps): React.ReactElement => {
     return (
         <ul className="tabbar-list">
             {links.map((link) => (
-                <TabBarItem
-                    key={link.label}
-                    label={link.label}
-                    tab={link.tab}
-                />
+                <TabBarItem key={link.tab} tab={link.tab} icon={link.icon} />
             ))}
         </ul>
     );

@@ -4,7 +4,7 @@ import './TabBarItem.css';
 
 type TabBarItemProps = Links;
 
-const TabBarItem: React.FC<TabBarItemProps> = ({ label, tab }: Links) => {
+const TabBarItem: React.FC<TabBarItemProps> = ({ tab, icon: Icon }: Links) => {
     const { setView } = useViewContext();
     const onChangeTab = (): void => {
         setView(tab);
@@ -12,7 +12,7 @@ const TabBarItem: React.FC<TabBarItemProps> = ({ label, tab }: Links) => {
     return (
         <li className="tabbar-item">
             <button onClick={onChangeTab} className="tabbar-button">
-                {label}
+                <Icon />
             </button>
         </li>
     );

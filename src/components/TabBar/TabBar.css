@@ -5,4 +5,5 @@
     justify-content: flex-start;
     align-items: flex-start;
     list-style-type: none;
+    user-select: none;
 }
