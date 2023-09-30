@@ -1,5 +1,7 @@
 .tabbar-item {
-    margin-bottom: 1.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    margin-bottom: 2rem;
     user-select: none;
 }
 
@@ -8,8 +10,4 @@
     border: 0;
     user-select: none;
     color: white;
-}
-
-.tabbar-button:hover {
-    color: red;
 }

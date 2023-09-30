@@ -5,3 +5,12 @@
     user-select: none;
     color: white;
 }
+
+.home-button svg {
+    width: 2.5rem;
+    fill: rgb(216, 34, 22);
+}
+
+.home-button .icon path {
+    stroke: rgb(216, 34, 22);
+}

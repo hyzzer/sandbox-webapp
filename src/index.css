@@ -19,7 +19,11 @@ html, body {
 }
 
 .icon {
-    width: 2rem;
+    width: 1.7rem;
     pointer-events: none;
     user-select: none;
+}
+
+.icon path {
+    stroke: rgb(190, 190, 190);
 }
