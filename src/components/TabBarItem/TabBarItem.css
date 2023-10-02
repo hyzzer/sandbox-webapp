@@ -1,8 +1,10 @@
 .tabbar-item {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    margin-top: 2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    margin-top: 1rem;
+    padding: 0.7rem;
     user-select: none;
+    border-radius: 100rem;
 }
 
 .tabbar-button {
@@ -10,4 +12,17 @@
     border: 0;
     user-select: none;
     color: white;
+}
+
+.tabbar-item:hover {
+    cursor: pointer;
+    background-color: rgb(201, 83, 75);
+}
+
+.tabbar-button:hover {
+    cursor: pointer;
+}
+
+.bottom-container .tabbar-item {
+    background-color: rgb(39, 39, 39);
 }
