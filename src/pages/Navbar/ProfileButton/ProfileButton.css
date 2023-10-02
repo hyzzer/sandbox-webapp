@@ -1,0 +1,11 @@
+.profile-button {
+    height: 1rem;
+    width: 1rem;
+    padding: 1rem;
+    border-radius: 100rem;
+    margin-top: 1rem;
+    background-color: grey;
+    background-image: url('../../../assets/smallTylerDurden.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}

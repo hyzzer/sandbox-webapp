@@ -11,6 +11,7 @@ import PackageIcon from '../../components/svg/PackageIcon/PackageIcon';
 import OrderIcon from '../../components/svg/OrderIcon/OrderIcon';
 import NotificationsIcon from '../../components/svg/NotificationsIcon/NotificationsIcon';
 import SettingsIcon from '../../components/svg/SettingsIcon/SettingsIcon';
+import ProfileButton from './ProfileButton/ProfileButton';
 
 const LeftNavbar: React.FC = () => {
     const TopTabBarlinks: Links[] = [
@@ -24,7 +25,6 @@ const LeftNavbar: React.FC = () => {
     const BottomTabBarlinks: Links[] = [
         { tab: Tab.NOTIFICATIONS, icon: NotificationsIcon },
         { tab: Tab.SETTINGS, icon: SettingsIcon },
-        { tab: Tab.PROFILE, icon: HomeIcon },
     ];
 
     return (
@@ -34,7 +34,10 @@ const LeftNavbar: React.FC = () => {
             </div>
             <div className="tabbbars-container">
                 <TabBar links={TopTabBarlinks} />
-                <TabBar links={BottomTabBarlinks} />
+                <div className="bottom-container">
+                    <TabBar links={BottomTabBarlinks} />
+                    <ProfileButton />
+                </div>
             </div>
         </nav>
     );
