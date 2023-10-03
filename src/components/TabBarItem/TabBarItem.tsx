@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useViewContext } from '../../hooks/useViewContext';
 import { Links } from '../../utils/Links';
 import './TabBarItem.css';
@@ -5,12 +6,21 @@ import './TabBarItem.css';
 type TabBarItemProps = Links;
 
 const TabBarItem: React.FC<TabBarItemProps> = ({ tab, icon: Icon }: Links) => {
-    const { setView } = useViewContext();
+    const { view, setView } = useViewContext();
+    const [classname, setClassname] = useState<string>('tabbar-item');
     const onChangeTab = (): void => {
         setView(tab);
     };
+
+    useEffect(() => {
+        if (view === tab) {
+            setClassname('tabbar-item selected');
+        } else {
+            setClassname('tabbar-item');
+        }
+    }, [tab, view]);
     return (
-        <li className="tabbar-item">
+        <li className={classname}>
             <button onClick={onChangeTab} className="tabbar-button">
                 <Icon />
             </button>

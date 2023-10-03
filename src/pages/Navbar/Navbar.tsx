@@ -13,7 +13,7 @@ import NotificationsIcon from '../../components/svg/NotificationsIcon/Notificati
 import SettingsIcon from '../../components/svg/SettingsIcon/SettingsIcon';
 import ProfileButton from './ProfileButton/ProfileButton';
 
-const LeftNavbar: React.FC = () => {
+const Navbar: React.FC = () => {
     const TopTabBarlinks: Links[] = [
         { tab: Tab.HOME, icon: HomeIcon },
         { tab: Tab.TRACKING, icon: TrackingIcon },
@@ -43,4 +43,4 @@ const LeftNavbar: React.FC = () => {
     );
 };
 
-export default LeftNavbar;
+export default Navbar;
