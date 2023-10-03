@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: Helvetica;
+    overflow: hidden;
 }
 
 #root {
@@ -15,7 +16,10 @@ html, body {
 }
 
 .content-container {
+    display: flex;
     flex: 1 1 auto;
+    height: 100%;
+    overflow: hidden;
 }
 
 .icon {

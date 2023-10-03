@@ -1,0 +1,17 @@
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    color: white;
+    font-size: 0.8rem;
+    width: 6.5rem;
+    height: 1.7rem;
+    background-color: rgb(40, 40, 161);
+    font-weight:600;
+    margin-left: 3rem;
+}
+
+.status-not-received {
+    background-color: rgb(206, 10, 10);
+}

@@ -13,11 +13,7 @@ const TabBarItem: React.FC<TabBarItemProps> = ({ tab, icon: Icon }: Links) => {
     };
 
     useEffect(() => {
-        if (view === tab) {
-            setClassname('tabbar-item selected');
-        } else {
-            setClassname('tabbar-item');
-        }
+        setClassname(view === tab ? 'tabbar-item selected' : 'tabbar-item');
     }, [tab, view]);
     return (
         <li className={classname}>

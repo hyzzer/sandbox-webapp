@@ -1,11 +1,39 @@
 .tracking-view-container {
-    height: 100%;
+    flex: 1 1 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     color: white;
-    font-size: xx-large;
     flex-direction: row;
-    background-color: red;
+    background-color: rgb(53, 53, 53);
     user-select: none;
+    padding: 2rem;
+}
+
+.tracking-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.packages-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 20px;
+    background-color: rgb(24, 24, 24);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    height: 100%;
+}
+
+.packages-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

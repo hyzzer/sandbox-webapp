@@ -1,0 +1,29 @@
+.package-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 39, 39);
+    border-radius: 25px;
+    list-style-type: none;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.package-top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.package-title {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.package-order {
+    color: rgb(177, 177, 177);
+    font-size: 0.9rem;
+    font-weight: lighter;
+    margin: 0;
+}

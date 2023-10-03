@@ -9,8 +9,8 @@ interface TabbarProps {
 const Tabbar = ({ links }: TabbarProps): React.ReactElement => {
     return (
         <ul className="tabbar-list">
-            {links.map((link) => (
-                <TabBarItem key={link.tab} tab={link.tab} icon={link.icon} />
+            {links.map(({ tab, icon }) => (
+                <TabBarItem key={tab} tab={tab} icon={icon} />
             ))}
         </ul>
     );
