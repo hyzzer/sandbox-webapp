@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    font-size: 16px;
     font-family: Helvetica;
     overflow: hidden;
 }
@@ -30,4 +31,18 @@ html, body {
 
 .icon path {
     stroke: rgb(190, 190, 190);
+}
+
+/* When the viewport is 1000px or less */
+@media (max-width: 900px) {
+    html {
+        font-size: 13px; /* smaller root font size */
+    }
+}
+
+/* When the viewport is 480px or less */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px; /* even smaller root font size */
+    }
 }

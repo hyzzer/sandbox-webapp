@@ -1,8 +1,8 @@
 import { Package } from '../../../utils/Package';
 import ReceptionStatus from '../ReceptionStatus/ReceptionStatus';
-import './PackageStatusCard.css';
+import './PackageCard.css';
 
-const PackageStatusCard = ({
+const PackageCard = ({
     city,
     isReceived,
     orderId,
@@ -18,4 +18,4 @@ const PackageStatusCard = ({
     );
 };
 
-export default PackageStatusCard;
+export default PackageCard;

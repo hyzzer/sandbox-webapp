@@ -1,0 +1,27 @@
+.order-card-main-container {
+    border-radius: 20px;
+    padding: 1.5rem;
+    background-color: rgb(24, 24, 24);
+}
+
+.order-card-top-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.order-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.order-card-top-container .status {
+    margin-left: 1rem;
+}
+
+.order-card-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

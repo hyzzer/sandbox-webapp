@@ -16,6 +16,10 @@
     margin-bottom: 0.2rem;
 }
 
+.package-top-container .status {
+    margin-left: 3rem;
+} 
+
 .package-title {
     font-size: 1.2rem;
     margin: 0;

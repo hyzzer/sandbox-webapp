@@ -1,7 +1,7 @@
 import './TrackingView.css';
-import ReceptionStatus from './ReceptionStatus/ReceptionStatus';
-import PackageStatusCard from './PackageStatusCard/PackageStatusCard';
+import PackageCard from './PackageCard/PackageCard';
 import { Package } from '../../utils/Package';
+import OrderCard from './OrderCard/OrderCard';
 
 const trackingData: Package[] = [
     {
@@ -43,7 +43,7 @@ const TrackingView = (): React.ReactElement => {
                 <p className="tracking-title">Delivery Tracking</p>
                 <ul className="packages-list">
                     {trackingData.map(({ city, isReceived, orderId }) => (
-                        <PackageStatusCard
+                        <PackageCard
                             key={orderId}
                             city={city}
                             isReceived={isReceived}
@@ -52,9 +52,8 @@ const TrackingView = (): React.ReactElement => {
                     ))}
                 </ul>
             </div>
-            <div>
-                <p>ORDER ID #14398-91751</p>
-                <ReceptionStatus />
+            <div className="order-container">
+                <OrderCard />
             </div>
         </div>
     );

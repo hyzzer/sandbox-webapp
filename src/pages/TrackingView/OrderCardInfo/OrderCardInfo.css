@@ -1,0 +1,10 @@
+.order-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* background-color: red; */
+}
+
+.order-card-info-title {
+    color: rgb(151, 151, 151)
+}
