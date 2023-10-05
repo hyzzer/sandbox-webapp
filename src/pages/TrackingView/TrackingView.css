@@ -1,6 +1,7 @@
 .tracking-view-container {
     flex: 1 1 auto;
     display: flex;
+    gap: 2rem;
     overflow: hidden;
     justify-content: flex-start;
     align-items: flex-start;
@@ -31,6 +32,7 @@
 .packages-list {
     display: flex;
     flex-direction: column;
+    gap: 0.8rem;
     justify-content: flex-start;
     list-style-type: none;
     margin: 0;
@@ -42,5 +44,4 @@
     display: flex;
     flex-grow: 1;
     flex-direction: column-reverse;
-    margin-left: 2rem;
 }
