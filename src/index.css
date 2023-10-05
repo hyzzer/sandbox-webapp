@@ -23,6 +23,17 @@ html, body {
     overflow: hidden;
 }
 
+.content-view-container {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: xx-large;
+    flex-direction: row;
+    user-select: none;
+}
+
 .icon {
     width: 1.7rem;
     pointer-events: none;
