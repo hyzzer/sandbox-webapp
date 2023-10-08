@@ -1,29 +1,22 @@
 .tabbar-item {
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
-    margin-top: 1rem;
     user-select: none;
-    border-radius: 100rem;
+    border-radius: 100%;
 }
 
 .tabbar-button {
-    background-color: transparent;
-    border: 0;
-    user-select: none;
-    color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.tabbar-button svg {
-    padding: 0.7rem;
+.tabbar-item svg {
+    padding: 0.9rem;
 }
 
 .tabbar-item:hover {
     cursor: pointer;
     background-color: rgb(65, 65, 65);
-}
-
-.tabbar-button:hover {
-    cursor: pointer;
 }
 
 .bottom-container .tabbar-item {
