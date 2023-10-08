@@ -1,13 +1,22 @@
 .package-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
     background-color: rgb(39, 39, 39);
     border-radius: 25px;
-    list-style-type: none;
     padding: 1.2rem;
+    list-style-type: none;
+    transition: background-color 0.3s ease;
+}
+
+.package-container.expanded {
+    background-color: #9a2020;
 }
 
 .package-top-container {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -17,7 +26,16 @@
 
 .package-top-container .status {
     margin-left: 3rem;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.package-container.expanded .package-top-container .status {
+    background-color: white;
+    color: black;
 } 
+
 
 .package-title {
     font-size: 1.2rem;
@@ -25,8 +43,23 @@
 }
 
 .package-order {
-    color: rgb(177, 177, 177);
+    color: rgb(214, 214, 214);
     font-size: 0.9rem;
     font-weight: lighter;
     margin: 0;
+}
+
+.package-card-info-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.separator {
+    margin-top: 1rem;
+    border: none;
+    height: 0.08rem;
+    background-color: rgba(192, 192, 192, 0.486);
+    width: 100%;
 }

@@ -36,7 +36,9 @@ const Navbar: React.FC = () => {
                 <TabBar links={TopTabBarlinks} />
                 <div className="bottom-container">
                     <TabBar links={BottomTabBarlinks} />
-                    <ProfileButton />
+                    <ProfileButton
+                        imageUrl={'src/assets/smallTylerDurden.jpg'}
+                    />
                 </div>
             </div>
         </nav>

@@ -1,4 +1,4 @@
-import OrderCardInfo from '../OrderCardInfo/OrderCardInfo';
+import CardInfo from '../CardInfo/CardInfo';
 import ReceptionStatus from '../ReceptionStatus/ReceptionStatus';
 import './OrderCard.css';
 
@@ -10,11 +10,11 @@ const OrderCard = (): React.ReactElement => {
                 <ReceptionStatus />{' '}
             </div>
             <div className="order-card-bottom-container">
-                <OrderCardInfo title="From" content="Warsaw, PL" />
-                <OrderCardInfo title="To" content="Berlin, De" />
-                <OrderCardInfo title="Current Location" content="Dresden, De" />
-                <OrderCardInfo title="Kms Left" content="620" />
-                <OrderCardInfo title="Last Stop" content="3 hours" />
+                <CardInfo title="From" content="Warsaw, PL" />
+                <CardInfo title="To" content="Berlin, De" />
+                <CardInfo title="Current Location" content="Dresden, De" />
+                <CardInfo title="Kms Left" content="620" />
+                <CardInfo title="Last Stop" content="3 hours" />
             </div>
         </div>
     );

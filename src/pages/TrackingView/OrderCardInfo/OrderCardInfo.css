@@ -1,9 +1,0 @@
-.order-card-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.order-card-info-title {
-    color: rgb(151, 151, 151)
-}

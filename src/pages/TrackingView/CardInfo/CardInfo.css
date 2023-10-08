@@ -1,0 +1,16 @@
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card-info-title {
+    color: rgb(214, 214, 214)
+}
+
+.card-info-content {
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}

@@ -7,16 +7,16 @@ type TabBarItemProps = Links;
 
 const TabBarItem: React.FC<TabBarItemProps> = ({ tab, icon: Icon }: Links) => {
     const { view, setView } = useViewContext();
-    const [classname, setClassname] = useState<string>('tabbar-item');
+    const [className, setClassName] = useState<string>('tabbar-item');
     const onChangeTab = (): void => {
         setView(tab);
     };
 
     useEffect(() => {
-        setClassname(view === tab ? 'tabbar-item selected' : 'tabbar-item');
+        setClassName(view === tab ? 'tabbar-item selected' : 'tabbar-item');
     }, [tab, view]);
     return (
-        <li className={classname}>
+        <li className={className}>
             <button onClick={onChangeTab} className="tabbar-button">
                 <Icon />
             </button>
