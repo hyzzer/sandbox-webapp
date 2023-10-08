@@ -12,7 +12,7 @@
 }
 
 .package-container.expanded {
-    background-color: #9a2020;
+    background: linear-gradient(to right, #9a2020c0, #9a2020);
 }
 
 .package-top-container {
@@ -36,10 +36,34 @@
     color: black;
 } 
 
-
 .package-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     margin: 0;
+}
+
+.package-progress-container {
+    width: 100%;
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.package-progress-bar-container {
+    display: flex;
+    height: 0.3rem;
+    width: 100%;
+    border-radius: 5rem;
+    background-color: rgba(255, 255, 255, 0.281);
+}
+
+.package-progress-bar {
+    border-radius: 5rem;
+    background-color: white;
 }
 
 .package-order {
@@ -50,6 +74,7 @@
 }
 
 .package-card-info-container {
+    flex-shrink: 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -58,8 +83,62 @@
 
 .separator {
     margin-top: 1rem;
+    margin-bottom: 1rem;
     border: none;
-    height: 0.08rem;
-    background-color: rgba(192, 192, 192, 0.486);
+    height: 0.15rem;
+    background-color: rgba(255, 255, 255, 0.151);
     width: 100%;
+}
+
+.package-bottom-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.package-driver-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.package-driver-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 0.5rem;
+}
+
+.package-driver-name {
+    font-weight: 600;
+}
+
+.package-icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.package-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.158);
+    border-radius: 100%;
+    padding: 0.5rem;
+}
+
+.package-icon-container svg path {
+    stroke: white;
+}
+
+.phone-icon-container {
+    background-color: white;
+}
+
+.phone-icon-container svg path {
+    stroke: black;
 }

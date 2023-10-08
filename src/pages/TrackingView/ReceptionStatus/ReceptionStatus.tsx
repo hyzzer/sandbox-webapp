@@ -7,10 +7,12 @@ type ReceptionStatusProps = {
 const ReceptionStatus = ({
     isReceived,
 }: ReceptionStatusProps): React.ReactElement => {
-    const statusClass = isReceived ? 'status' : ' status status-not-received';
-
     return (
-        <div className={statusClass}>
+        <div
+            className={`status ${
+                !isReceived === true ? 'status-not-received' : ''
+            }`}
+        >
             {isReceived === true ? 'RECEIVED' : 'ON THE WAY'}
         </div>
     );
