@@ -1,8 +1,15 @@
+import { DeliveryDetails } from '../../../utils/Package';
 import CardInfo from '../CardInfo/CardInfo';
 import ReceptionStatus from '../ReceptionStatus/ReceptionStatus';
 import './OrderCard.css';
 
-const OrderCard = (): React.ReactElement => {
+const OrderCard = ({
+    departureCity,
+    arrivalCity,
+    currentLocation,
+    kmsLeft,
+    lastStop,
+}: DeliveryDetails): React.ReactElement => {
     return (
         <div className="order-card-main-container">
             <div className="order-card-top-container">
@@ -10,11 +17,11 @@ const OrderCard = (): React.ReactElement => {
                 <ReceptionStatus />{' '}
             </div>
             <div className="order-card-bottom-container">
-                <CardInfo title="From" content="Warsaw, PL" />
-                <CardInfo title="To" content="Berlin, De" />
-                <CardInfo title="Current Location" content="Dresden, De" />
-                <CardInfo title="Kms Left" content="620" />
-                <CardInfo title="Last Stop" content="3 hours" />
+                <CardInfo title="From" content={departureCity} />
+                <CardInfo title="To" content={arrivalCity} />
+                <CardInfo title="Current Location" content={currentLocation} />
+                <CardInfo title="Kms Left" content={kmsLeft} />
+                <CardInfo title="Last Stop" content={lastStop} />
             </div>
         </div>
     );

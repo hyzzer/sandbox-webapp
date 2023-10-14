@@ -2,7 +2,7 @@ import './CardInfo.css';
 
 type OrderCardInfoProps = {
     title: string;
-    content: string;
+    content: string | number;
 };
 
 const CardInfo = ({

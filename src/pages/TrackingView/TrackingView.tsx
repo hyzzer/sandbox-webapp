@@ -3,14 +3,19 @@ import PackageCard from './PackageCard/PackageCard';
 import OrderCard from './OrderCard/OrderCard';
 import { trackingData } from '../../utils/data/trackingData';
 import { useState } from 'react';
+import { Package } from '../../utils/Package';
 
 const TrackingView = (): React.ReactElement => {
-    const [selectedPackage, setSelectedPackage] = useState<string | undefined>(
+    const [selectedPackage, setSelectedPackage] = useState<Package | undefined>(
         undefined
     );
 
-    const onChangeSelectedPackage = (orderId: string): void => {
-        setSelectedPackage(selectedPackage === orderId ? undefined : orderId);
+    const onChangeSelectedPackage = (packageElt: Package): void => {
+        setSelectedPackage(
+            selectedPackage?.orderId === packageElt.orderId
+                ? undefined
+                : packageElt
+        );
     };
 
     return (
@@ -18,31 +23,40 @@ const TrackingView = (): React.ReactElement => {
             <div className="packages-container">
                 <p className="tracking-title">Delivery Tracking</p>
                 <ul className="packages-list">
-                    {trackingData.map(
-                        ({
-                            city,
-                            isReceived,
-                            orderId,
-                            packageDetails,
-                            deliveryDetails,
-                        }) => (
-                            <PackageCard
-                                key={orderId}
-                                city={city}
-                                isReceived={isReceived}
-                                orderId={orderId}
-                                packageDetails={packageDetails}
-                                deliveryDetails={deliveryDetails}
-                                onClick={(): void =>
-                                    onChangeSelectedPackage(orderId)
-                                }
-                            />
-                        )
-                    )}
+                    {trackingData.map((packageElt) => (
+                        <PackageCard
+                            key={packageElt.orderId}
+                            city={packageElt.city}
+                            isReceived={packageElt.isReceived}
+                            orderId={packageElt.orderId}
+                            packageDetails={packageElt.packageDetails}
+                            deliveryDetails={packageElt.deliveryDetails}
+                            onClick={(): void =>
+                                onChangeSelectedPackage(packageElt)
+                            }
+                            isSelected={
+                                selectedPackage?.orderId === packageElt.orderId
+                            }
+                        />
+                    ))}
                 </ul>
             </div>
             <div className="order-container">
-                <OrderCard />
+                {selectedPackage !== undefined && (
+                    <OrderCard
+                        departureCity={
+                            selectedPackage.deliveryDetails.departureCity
+                        }
+                        arrivalCity={
+                            selectedPackage.deliveryDetails.arrivalCity
+                        }
+                        currentLocation={
+                            selectedPackage.deliveryDetails.currentLocation
+                        }
+                        kmsLeft={selectedPackage.deliveryDetails.kmsLeft}
+                        lastStop={selectedPackage.deliveryDetails.lastStop}
+                    />
+                )}
             </div>
         </div>
     );

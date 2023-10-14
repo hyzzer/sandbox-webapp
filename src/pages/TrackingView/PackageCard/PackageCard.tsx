@@ -7,18 +7,21 @@ import ProfileButton from '../../Navbar/ProfileButton/ProfileButton';
 import MessagesIcon from '../../../components/svg/MessagesIcon/MessagesIcon';
 import PhoneIcon from '../../../components/svg/PhoneIcon/PhoneIcon';
 
-type PackageCardProps = Package & { onClick: () => void };
+type PackageCardProps = Package & {
+    onClick: () => void;
+    isSelected: boolean;
+};
 
 const PackageCard = ({
     city,
     isReceived,
     orderId,
-    packageDetails: details,
+    packageDetails,
+    onClick,
+    isSelected,
 }: PackageCardProps): React.ReactElement => {
-    const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
-
     const onShowDetails = (): void => {
-        setIsExpanded((previousIsExpanded) => !previousIsExpanded);
+        onClick();
     };
 
     const handleDirectMessage: React.MouseEventHandler<HTMLButtonElement> = (
@@ -36,7 +39,7 @@ const PackageCard = ({
     return (
         <li>
             <button
-                className={`package-container ${isExpanded ? 'expanded' : ''}`}
+                className={`package-container ${isSelected ? 'expanded' : ''}`}
                 onClick={onShowDetails}
             >
                 <div className="package-top-container">
@@ -44,15 +47,15 @@ const PackageCard = ({
                     <ReceptionStatus isReceived={isReceived} />
                 </div>
                 <p className="package-order">{`Order ID #${orderId}`}</p>
-                {isExpanded && (
+                {isSelected && (
                     <>
                         <div className="package-progress-container">
-                            {`${details.deliveryProgressPercentage}%`}
+                            {`${packageDetails.deliveryProgressPercentage}%`}
                             <div className="package-progress-bar-container">
                                 <span
                                     className="package-progress-bar"
                                     style={{
-                                        width: `${details.deliveryProgressPercentage}%`,
+                                        width: `${packageDetails.deliveryProgressPercentage}%`,
                                     }}
                                 />
                             </div>
@@ -61,22 +64,22 @@ const PackageCard = ({
                             <CardInfo
                                 title="Customer"
                                 content={
-                                    details.customer !== ''
-                                        ? details.customer
+                                    packageDetails.customer !== ''
+                                        ? packageDetails.customer
                                         : 'Unnamed'
                                 }
                             />
                             <CardInfo
                                 title="Weight"
-                                content={`${details.weight} kg`}
+                                content={`${packageDetails.weight} kg`}
                             />
                             <CardInfo
                                 title="Price"
-                                content={`$ ${details.price}`}
+                                content={`$ ${packageDetails.price}`}
                             />
                             <CardInfo
                                 title="Departure"
-                                content={`${details.departureDay} ${details.departureMonth}`}
+                                content={`${packageDetails.departureDay} ${packageDetails.departureMonth}`}
                             />
                         </div>
                         <hr className="separator" />
@@ -87,8 +90,8 @@ const PackageCard = ({
                                 />
                                 <div className="package-driver-info-container">
                                     <span className="package-driver-name">
-                                        {details.driver !== ''
-                                            ? details.driver
+                                        {packageDetails.driver !== ''
+                                            ? packageDetails.driver
                                             : 'Unnamed Driver'}
                                     </span>
                                     <span>Driver</span>
