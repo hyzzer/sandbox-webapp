@@ -8,9 +8,18 @@ export type PackageDetails = {
     driver: string;
 };
 
+export type DeliveryDetails = {
+    departureCity: string;
+    arrivalCity: string;
+    currentLocation: string;
+    kmsLeft: number;
+    lastStop: number;
+};
+
 export type Package = {
     city: string;
     isReceived: boolean;
     orderId: string;
-    details: PackageDetails;
+    packageDetails: PackageDetails;
+    deliveryDetails: DeliveryDetails;
 };

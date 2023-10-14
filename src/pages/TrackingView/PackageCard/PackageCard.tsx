@@ -7,12 +7,14 @@ import ProfileButton from '../../Navbar/ProfileButton/ProfileButton';
 import MessagesIcon from '../../../components/svg/MessagesIcon/MessagesIcon';
 import PhoneIcon from '../../../components/svg/PhoneIcon/PhoneIcon';
 
+type PackageCardProps = Package & { onClick: () => void };
+
 const PackageCard = ({
     city,
     isReceived,
     orderId,
-    details,
-}: Package): React.ReactElement => {
+    packageDetails: details,
+}: PackageCardProps): React.ReactElement => {
     const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
 
     const onShowDetails = (): void => {
