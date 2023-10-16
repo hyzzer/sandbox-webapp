@@ -45,6 +45,10 @@ button, input[type="submit"], input[type="reset"] {
     user-select: none;
 }
 
+.content-view-container span {
+    user-select: none;
+}
+
 .icon {
     width: 1.7rem;
     /* height: 1.7rem; */
